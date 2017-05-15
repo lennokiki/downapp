@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <meta name="description" content="就爱天天玩,H5小游戏平台">
+	    <meta name="keywords" content="就爱天天玩">      
+	    <meta http-equiv="pragma" content="no-cache" />
+	    <meta name="format-detection" content="telephone=no" /> 
+	    <link rel="stylesheet" href="./index.css" />
+	</head>
+	<body>
+		<div class="loading" id="loading">
+	      <div class="loader">
+	        <div class="loader-inner ball-clip-rotate-multiple">
+	          <div></div>
+	          <div></div>
+	        </div>
+	      </div>
+	      <p>加载中...</p>
+		</div>
+		<div class="logo-out">
+			<img src="./images/fire.png" alt=""  class="logo-bg"/>
+			<img src="./images/logo.png" alt=""  class="logo"/>
+		</div>
+		<div class="person-out">
+			<img src="./images/person.png" alt="" class="person" />
+			
+			<img src="./images/light6.png" alt="" class="light6"/>
+		</div>
+		<div class="footers">
+			<img src="./images/light2.png" alt="" class="light5"/>
+			<img src="./images/title1.png" alt="" class="title1"/>
+			<img src="./images/title2.png" alt="" class="title2"/>	
+			<a href="./io.dcloud.H5349DAF9_legu_signed.apk" class="btns" id="btn"  download=""></a>
+		</div>
+		<div class="infors" id="infors">
+			请点击上方按钮<br>在浏览器打开
+		</div>
+		<div class="close" id="close"></div>
+		<script>
+			var btn = document.getElementById('btn');
+			var info = navigator.userAgent.toLowerCase();
+			var isWeiXin = info.indexOf('micromessenger') > -1;
+			var al = document.getElementById('infors');
+			btn.onclick = function(){
+				if( /iphone|mac|ipod|ipad/i.test(info)){
+					alert('抱歉暂不支持ios下载！');
+					return false;
+				}else{
+					if( isWeiXin ){
+						al.style.display = "block";
+					}
+				}
+			}
+			document.getElementById('close').onclick = function(){
+				al.style.display = "none";
+			}
+			window.onload = function(){
+				//document.getElementById('loading').style.display= 'none';
+			}
+		</script>
+	</body>
+</html>

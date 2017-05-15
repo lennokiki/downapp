@@ -1,0 +1,392 @@
+@charset "UTF-8";a,abbr,acronym,address,applet,big,blockquote,body,caption,cite,code,dd,del,dfn,div,dl,dt,em,fieldset,form,h1,h2,h3,h4,h5,h6,html,iframe,img,input,ins,kbd,label,legend,li,object,ol,p,pre,q,s,samp,small,span,strike,strong,sub,sup,table,tbody,td,tfoot,th,thead,tr,tt,ul,var{margin:0;padding:0;border:0;outline:0;font-weight:400;font-style:inherit;font-family:Tahoma,Arial,Roboto,Droid Sans,Helvetica Neue,Droid Sans Fallback,Heiti SC,微软雅黑,sans-self}a,a:active,a:hover,a:link,a:visited{text-decoration:none;outline:none}a,button,div,img,input,span,textarea{-webkit-tap-highlight-color:rgba(255,255,255,0)}table{border-collapse:separate;border-spacing:0}td,th{text-align:left;font-weight:400}iframe,img{border:none;text-decoration:none}ol,ul{list-style:none}.clears{clear:both}select{-webkit-appearance:none;-moz-appearance:none;background:none}button{outline:none}
+html{
+	font-size: 20px;
+	line-height: 1.5;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+body {
+	width: 100%;
+	height: 100%;
+	background: url("./images/bg.png");
+	background-size: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.person-out {
+	width: 17.7rem;
+	height: 24rem;
+	position: absolute;
+	left:50%;
+	top: .5rem;
+	margin-left:-8.85rem;	
+}
+.person {
+	width: 17.7rem;
+	height: 24rem;
+	position: absolute;
+	left:0;
+	top:0;
+	z-index:2;
+}
+.light5 {
+	width: 100%;
+	height: 1.5rem;
+	position: absolute;
+	left:0;
+	top: -.75rem;
+	z-index:3;
+}
+.light6 {
+	width: 10rem;
+	height: 8rem;
+	position: absolute;
+	top: -3.8rem;
+	right:-2rem ;
+	z-index: 1;
+	transform: rotate(10deg);
+}
+.logo-out {
+	width:  8.4rem;
+	height: 9rem;
+	position: absolute;
+	left: -1rem;
+	top: -1rem;	
+}
+.logo-bg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: url('./images/fire.png');
+	background-size: 100%;
+	opacity: .3;
+	z-index: 1;
+}
+.logo {
+	width: 6rem; 
+	height:  3.95rem;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -3rem;
+	margin-top: -2.875rem;
+	z-index: 2;
+}
+.footers {
+	width: 15.75rem;
+	height: 10rem;
+	position: fixed;
+	left: 50%;
+	bottom: 2.5rem;
+	margin-left: -7.875rem;
+	z-index: 99;
+}
+.title1 {
+	width: 15.75rem;
+	height:  5.75rem;
+	display: block;
+}
+.title2 {
+	width: 10.65rem;
+	height: 1.5rem;
+	display: block;
+	margin: .3rem auto .6rem;
+}
+.btns {
+	width: 7.15rem;
+	height: 2.7rem;
+	background: url('./images/btn.png');
+	background-size: 100%;
+	display: block;
+	margin: 0 auto;
+}
+.close {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index:11;
+	opacity: none;
+	left:0;
+	top:0;
+}
+.infors {
+	padding: .6rem .4rem;
+	background: rgba(0,0,0, .9);
+	border-radius: .25rem;
+	position: fixed;
+	right: .5rem;
+	top: .8rem;
+	z-index: 18;
+	font-size: .6rem;
+	color: #fff;
+	line-height: 2;
+	display: none;
+}
+.loading {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left:0;
+	top:0;
+	background: #f76f27;
+	z-index:999;
+}
+.loader-inner {
+	margin: 0 auto;
+}
+.loading>p {
+	font-size: .7rem;
+	text-align: center;
+	line-height: 2;
+	color: #fff;
+}
+.infors::before {
+	content: "";
+	width: 1em;
+	height: 1em;
+	position: absolute;
+	right: .5rem;
+	top: -.25rem;
+	background: rgba(0,0,0, .9);
+	transform: rotate(45deg);
+	z-index: 1;
+}
+.loader {
+	width: 35px;
+	height: 35px;
+	margin: 60% auto 1rem;
+}
+.ball-clip-rotate-multiple {
+  position: relative; 
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1); }
+
+  50% {
+    -webkit-transform: rotate(180deg) scale(0.6);
+            transform: rotate(180deg) scale(0.6); }
+
+  100% {
+    -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1); } 
+}
+.ball-clip-rotate-multiple > div {
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border: 2px solid #fff;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+    border-radius: 100%;
+    height: 35px;
+    width: 35px;
+    -webkit-animation: rotate 1s 0s ease-in-out infinite;
+    animation: rotate 1s 0s ease-in-out infinite; 
+}
+.ball-clip-rotate-multiple > div:last-child {
+     display: inline-block;
+     top: 10px;
+     left: 10px;
+     width: 15px;
+     height: 15px;
+     -webkit-animation-duration: 0.5s;
+     animation-duration: 0.5s;
+     border-color: #fff transparent #fff transparent;
+    -webkit-animation-direction: reverse;
+  	animation-direction: reverse; 
+}
+@media only screen and (min-width: 414px){
+	.person-out {
+	    width: 17.7rem;
+	    height: 24rem;
+	    position: absolute;
+	    left: 50%;
+	    top: 2rem;
+	    margin-left: -8.85rem;
+	}	
+}
+@media only screen and (min-width: 768px){
+	.person-out {
+		width: 30.08rem;
+		height: 40.8rem;
+		position: absolute;
+		left:50%;
+		top:3rem;
+		margin-left:-15.04rem;
+	}
+	.person {
+		width: 30.08rem;
+		height: 40.8rem;
+		position: absolute;
+		left:0;
+		top:0;
+		z-index:2;
+	}	
+	.light5 {
+		width: 100%;
+		height: 3rem;
+		position: absolute;
+		left:0;
+		top: -1.5rem;
+		z-index:3;
+	}
+	.light6 {
+		width: 16rem;
+		height: 12.8rem;
+		position: absolute;
+		top: -6.08rem;
+		right:-3.2rem ;
+		z-index: 1;
+		transform: rotate(10deg);
+	}	
+	.logo-out {
+		width:  13.44rem;
+		height: 14.4rem;
+		position: absolute;
+		left: -1.6rem;
+		top: -1.9rem;	
+	}
+	.logo-bg {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background: url('./images/fire.png');
+		background-size: 100%;
+		opacity: .3;
+		z-index: 1;
+	}
+	.logo {
+		width: 9.6rem; 
+		height:  6.32rem;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -4.8rem;
+		margin-top: -3.6rem;
+		z-index: 2;
+	}
+	.footers {
+		width: 25.2rem;
+		height: 16rem;
+		position: fixed;
+		left: 50%;
+		bottom: 4rem;
+		margin-left: -12.6rem;
+		z-index: 99;
+	}
+	.title1 {
+		width: 25.2rem;
+		height:  9.2rem;
+		display: block;
+	}
+	.title2 {
+		width: 17.04rem;
+		height: 2.4rem;
+		display: block;
+		margin: .48rem auto .96rem;
+	}
+	.btns {
+		width: 11.44rem;
+		height: 4.32rem;
+		background: url('./images/btn.png');
+		background-size: 100%;
+		display: block;
+		margin: 0 auto;
+	}	
+}
+
+@media only screen and (max-width: 320px){
+	.person-out {
+		width: 15.04rem;
+		height: 20.4rem;
+		position: absolute;
+		left:50%;
+		top:1.5rem;
+		margin-left:-7.52rem;
+	}
+	.person {
+		width: 15.04rem;
+		height: 20.4rem;
+		position: absolute;
+		left:0;
+		top:0;
+		z-index:2;
+	}	
+	.light5 {
+		width: 100%;
+		height: 1.5rem;
+		position: absolute;
+		left:0;
+		top: -.75rem;
+		z-index:3;
+	}
+	.light6 {
+		width: 8rem;
+		height: 6.4rem;
+		position: absolute;
+		top: -3.04rem;
+		right:-1.6rem ;
+		z-index: 1;
+		transform: rotate(10deg);
+	}	
+	.logo-out {
+		width:  6.72rem;
+		height: 7.2rem;
+		position: absolute;
+		left: -.8rem;
+		top: -.8rem;	
+	}
+	.logo-bg {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background: url('./images/fire.png');
+		background-size: 100%;
+		opacity: .3;
+		z-index: 1;
+	}
+	.logo {
+		width: 4.8rem; 
+		height:  3.16rem;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -2.4rem;
+		margin-top: -1.8rem;
+		z-index: 2;
+	}
+	.footers {
+		width: 12.6rem;
+		height: 8rem;
+		position: fixed;
+		left: 50%;
+		bottom: 2rem;
+		margin-left: -6.3rem;
+		z-index: 99;
+	}
+	.title1 {
+		width: 12.6rem;
+		height:  4.6rem;
+		display: block;
+	}
+	.title2 {
+		width: 8.52rem;
+		height: 1.2rem;
+		display: block;
+		margin: .24rem auto .48rem;
+	}
+	.btns {
+		width: 5.72rem;
+		height: 2.16rem;
+		background: url('./images/btn.png');
+		background-size: 100%;
+		display: block;
+		margin: 0 auto;
+	}	
+}
